@@ -3,4 +3,4 @@ requests
 PyPDF2
 python-pptx  
 pybase64
-PIL
+pillow
