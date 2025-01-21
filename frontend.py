@@ -100,9 +100,9 @@ if uploaded_files:
 
 
         # Specifications input for each file
-    for index, uploaded_file in enumerate(uploaded_files):
+    for idx, uploaded_file in enumerate(uploaded_files):
         st.subheader(f"Specifications for {uploaded_file.name}")
-        index=index+1
+        idx=idx+1
         st.write("Page count:",page_count)
         binding = st.selectbox(f"Binding for {uploaded_file.name}", ["None", "Spiral", "Tape"], key=f"binding_{idx}")
         paper = st.selectbox(f"Paper for {uploaded_file.name}", ["Regular", "Bond"], key=f"paper_{idx}")
@@ -140,13 +140,13 @@ if uploaded_files:
     # Submit the data
     if st.button("Submit"):
         with st.spinner("Uploading..."):
-            for index, uploaded_file in enumerate(uploaded_files):
+            for idx, uploaded_file in enumerate(uploaded_files):
                 # Prepare the JSON payload
                 payload = {
                     "File":encoded_file,
                     "upi_id": upi_id,
                     "file_name": uploaded_file.name,
-                    "specifications": file_details[index],
+                    "specifications": file_details[idx],
                 }
 
                 # Example server endpoint (replace with actual URL)
