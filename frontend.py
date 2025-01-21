@@ -49,7 +49,7 @@ def count_pages(file, file_extension):
             return len(pdf_reader.pages)
         elif file_extension == "pptx":
             presentation = Presentation(file)
-            return len(presentation.slides
+            return len(presentation.slides)
         elif file_extension == "png":
             img = Image.open(file)
             img.verify()  # Verify if the image is valid
