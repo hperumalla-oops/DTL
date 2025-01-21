@@ -39,7 +39,7 @@ def calculate_cost(specs):
     if lamination == 'Yes':
         cost += 30
 
-    return cost * copies
+    return int(cost * copies)
 
 def count_pages(file, file_extension):
     try:
@@ -125,7 +125,7 @@ if uploaded_files:
             "copies": copies
         }
         file_cost =calculate_cost(specs)
-        total_cost+= file_cost
+        total_cost=total_cost + file_cost
         file_details.append(specs)
 
         st.write(f"** Total cost for printout: ₹{file_cost}**",
