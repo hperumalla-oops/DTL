@@ -1,6 +1,9 @@
 streamlit
-random2  # 'random' is part of Python's standard library, no need to include it
+random2  
 requests
 PyPDF2
-python-pptx  # 'pptx' is also known as 'python-pptx'
-python-docx  # 'docx' is also known as 'python-docx'
+python-pptx  
+python-docx  
+os
+base64
+PIL
