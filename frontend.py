@@ -39,7 +39,7 @@ def calculate_cost(specs):
     if lamination == 'Yes':
         cost += 30
 
-    return int(cost * copies)
+    return cost * copies
 
 def count_pages(file, file_extension):
     try:
@@ -103,14 +103,14 @@ if uploaded_files:
     for index, uploaded_file in enumerate(uploaded_files):
         st.subheader(f"Specifications for {uploaded_file.name}")
         index=index+1
-        binding = st.selectbox(f"Binding for {uploaded_file.name}", ["None", "Spiral", "Tape"], key=f"binding_{index}")
-        paper = st.selectbox(f"Paper for {uploaded_file.name}", ["Regular", "Bond"], key=f"paper_{index}")
-        size = st.selectbox(f"Size for {uploaded_file.name}", ["A3", "A4", "Passport"], key=f"size_{index}")
-        color = st.selectbox(f"Color for {uploaded_file.name}", ["Colored", "Black-and-White"], key=f"color_{index}")
-        side = st.selectbox(f"Side for {uploaded_file.name}", ["Single", "Double"], key=f"side_{index}")
-        lamination = st.selectbox(f"Lamination for {uploaded_file.name}", ["Yes", "No"], key=f"lamination_{index}")
-        copies = st.number_input(f"Copies for {uploaded_file.name}", min_value=1, step=1, key=f"copies_{index}")
-
+        st.write("Page count:",page_count)
+        binding = st.selectbox(f"Binding for {uploaded_file.name}", ["None", "Spiral", "Tape"], key=f"binding_{idx}")
+        paper = st.selectbox(f"Paper for {uploaded_file.name}", ["Regular", "Bond"], key=f"paper_{idx}")
+        size = st.selectbox(f"Size for {uploaded_file.name}", ["A4", "A3", "Passport"], key=f"size_{idx}")
+        color = st.selectbox(f"Color for {uploaded_file.name}", ["Colored", "Black-and-White"], key=f"color_{idx}")
+        side = st.selectbox(f"Side for {uploaded_file.name}", ["Double", "Single"], key=f"side_{idx}")
+        lamination = st.selectbox(f"Lamination for {uploaded_file.name}", ["No", "Yes"], key=f"lamination_{idx}")
+        copies = st.number_input(f"Copies for {uploaded_file.name}", min_value=1, step=1, key=f"copies_{idx}")
 
         specs={
             "name": uploaded_file.name,
