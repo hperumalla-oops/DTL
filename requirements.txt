@@ -1,9 +1,7 @@
 streamlit
-random2  
 requests
 PyPDF2
 python-pptx  
 python-docx  
-os
 base64
 PIL
