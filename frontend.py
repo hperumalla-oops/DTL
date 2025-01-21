@@ -49,10 +49,7 @@ def count_pages(file, file_extension):
             return len(pdf_reader.pages)
         elif file_extension == "pptx":
             presentation = Presentation(file)
-            return len(presentation.slides)
-        elif file_extension == "docx":
-            document = Document(file)
-            return len(document.paragraphs)  # Approximation for Word files
+            return len(presentation.slides
         elif file_extension == "png":
             img = Image.open(file)
             img.verify()  # Verify if the image is valid
@@ -84,7 +81,7 @@ upi_id = st.text_input("Enter your Banking Name", placeholder="e.g., Vaivaswat V
 file_To=0
 
 # Upload multiple files
-uploaded_files = st.file_uploader("Upload Files", accept_multiple_files=True, type=["pdf", "docx", "jpg", "png"])
+uploaded_files = st.file_uploader("Upload Files", accept_multiple_files=True, type=["pdf","pptx", "jpg", "png"])
 UPLOAD_FOLDER = "uploads"
 
 if not os.path.exists(UPLOAD_FOLDER):
