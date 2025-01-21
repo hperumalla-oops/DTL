@@ -1,12 +1,10 @@
 import streamlit as st
-import random
 import requests
 from PyPDF2 import PdfReader
 from pptx import Presentation
 from docx import Document
 import os
 import base64
-import webbrowser
 from PIL import Image
 
 
