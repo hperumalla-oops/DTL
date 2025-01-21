@@ -129,7 +129,9 @@ if uploaded_files:
         total_cost+= file_cost
         file_details.append(specs)
 
-        st.write(f"**Cost for {uploaded_file.name}: ₹{file_cost}**")
+        st.write(f"** Total cost for printout: ₹{file_cost}**",
+                f"Please pay ₹{total_cost} to the following phone number: 99XXXXXXXXX (MR. Manoj, RVCE Printing). "
+                )
         st.write("---")
 
     for file_spec in file_details:
@@ -155,11 +157,7 @@ if uploaded_files:
                     # Send data to the server
                     response = requests.post(server_url, json=payload)
                     if response.status_code == 200:
-                        st.success(f"Files uploaded successfully!"
-                       f"The total cost of your printouts is ₹{total_cost}. "
-                        f"Please pay ₹{total_cost} to the following phone number: 99XXXXXXXXX (MR. Manoj, RVCE Printing). "
-                        f"After payment, click on verify."
-                        )
+                        st.success(f"Payment verified and files uploaded successfully!")
 
                     else:
                         st.error(f"Error uploading files: {response.json()}")
