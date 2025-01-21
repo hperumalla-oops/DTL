@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 from PyPDF2 import PdfReader
 from pptx import Presentation
-from docx import Document
 import os
 import base64
 from PIL import Image
