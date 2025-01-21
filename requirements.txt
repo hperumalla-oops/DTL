@@ -1,0 +1,6 @@
+streamlit
+random2  # 'random' is part of Python's standard library, no need to include it
+requests
+PyPDF2
+python-pptx  # 'pptx' is also known as 'python-pptx'
+python-docx  # 'docx' is also known as 'python-docx'
