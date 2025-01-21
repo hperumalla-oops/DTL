@@ -2,6 +2,5 @@ streamlit
 requests
 PyPDF2
 python-pptx  
-python-docx  
 base64
 PIL
