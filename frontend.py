@@ -128,9 +128,8 @@ if uploaded_files:
         total_cost=total_cost + file_cost
         file_details.append(specs)
 
-        st.write(f"** Total cost for printout: ₹{file_cost}**",
-                f"Please pay ₹{total_cost} to the following phone number: 99XXXXXXXXX (MR. Manoj, RVCE Printing). "
-                )
+        st.write(f"** Total cost for printout: ₹{file_cost}**")
+        st.write(f"**Please pay ₹{total_cost} to the following phone number: 99XXXXXXXXX (MR. Manoj, RVCE Printing).***")
         st.write("---")
 
     for file_spec in file_details:
