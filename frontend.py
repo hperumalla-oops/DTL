@@ -124,7 +124,7 @@ if uploaded_files:
             "lamination": lamination,
             "copies": copies
         }
-        file_cost =calculate_cost(specs)
+        file_cost =float(calculate_cost(specs))
         total_cost=total_cost + file_cost
         file_details.append(specs)
 
