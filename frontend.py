@@ -61,8 +61,13 @@ def count_pages(file, file_extension):
 
 
 
-
 st.image("final.jpg", caption="RVCE Printing shop", width=600)
+
+
+# Title
+st.title("RVCE Printing Shop")
+st.write("File Upload and Specification Selector")
+
 
 upi_id = st.text_input("Enter your Banking Name", placeholder="e.g., Vaivaswat Verma")
 file_To=0
@@ -117,7 +122,7 @@ if uploaded_files:
         file_details.append(specs)
 
         st.write(f"** Total cost for printout: ₹{file_cost}**")
-        st.write(f"**Please pay ₹{total_cost} to the following phone number: 9901690875 (MR. Manoj, RVCE Printing).***")
+        st.write(f"**Please pay ₹{total_cost} to the following phone number: 99XXXXXXXXX (MR. Manoj, RVCE Printing).***")
         st.write("---")
 
     for file_spec in file_details:
